@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Photo Album</title>
+</head>
+<body>
+
+    <header>
+        <h1 class ="title">My Photo Album</h1>
+        <div class ="logo">
+            <a class="fa fa-instagram"></a>
+        </div>
+    </header>
+    
+    <nav>
+        <div class="nav-bar">Instructions</div>
+    </nav>
+
+    <main>
+        <h2>
+            <div class="main-instruction">Click the flashing button to upload an image</div>
+        </h2>
+    </main>
+
+    <form class="form" action="/upload" enctype="multipart/form-data" method="post">
+        <div class="sub-main-instruction">Instructions: Click the flashing button to add an image. Then click Upload!</div>
+            <div class="form-section">
+                    <input class="choose-file-button" type="file" name="upload" multiple="multiple" required accept=".png"/>
+                <input class="submit-button" type="submit" value="Upload"></input>
+            </div>
+    </form>
+   <div class="images">
+        
+   </div>
+    <footer>
+        <section>
+            <div class="footer-box">Photo Analysis tags go here</div>
+        </section>
+    </footer>
+
+</body>
+</html>

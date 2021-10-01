@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        document.querySelector(".home").addEventListener("click", event => {
+            event.preventDefault();
+            fetch("/finalPage.html")
+                .then(function(response) {
+                    return response.text();
+                })
+                .then(function(html) {
+                    console.log(html);
+                })
+                .catch(function(err) {
+                    console.warn("Something went wrong.", err);
+                });
+        });
+    </script>
+</head>
+<body>
+    <h1>File successfully upload</h1>
+    <a class="home" href="/finalPage.html" target="_parent">Go back to home page</a>
+</body>
+</html>
